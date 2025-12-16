@@ -781,7 +781,7 @@ Our goal is to make it easy for anyone — from developers to traders — to bui
 
 ### Follow Us
 
-- 🐦 X (Twitter): [@polyemperion](https://x.com/polyemperion)
+- 🐦 X (Twitter): [@polyemperion](https://x.com/polyemperionxyz)
 - 🌐 Website: [https://polyemperion.xyz](https://polyemperion.xyz)
 
 ### $PolyEmperion Token
