@@ -1,13 +1,13 @@
 /**
- * Base error class for all PolyEmperion SDK errors.
+ * Base error class for all POLYNOCTON SDK errors.
  */
-export class PolyEmperionError extends Error {
+export class POLYNOCTONError extends Error {
   code?: string;
   cause?: unknown;
   
   constructor(message: string, code?: string, cause?: unknown) {
     super(message);
-    this.name = "PolyEmperionError";
+    this.name = "POLYNOCTONError";
     this.code = code;
     this.cause = cause;
   }
@@ -16,7 +16,7 @@ export class PolyEmperionError extends Error {
 /**
  * Error thrown when an HTTP request fails.
  */
-export class HttpError extends PolyEmperionError {
+export class HttpError extends POLYNOCTONError {
   status: number;
   
   constructor(status: number, message: string, cause?: unknown) {
