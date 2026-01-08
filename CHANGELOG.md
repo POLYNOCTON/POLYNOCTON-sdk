@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the POLYEMPERION SDK will be documented in this file.
+All notable changes to the POLYNOCTON SDK will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -99,14 +99,14 @@ None! This release is fully backward compatible with v0.3.0.
 ## [0.1.0] - 2025-10-31
 
 ### Added
-- Initial release of POLYEMPERION SDK
-- `POLYEMPERIONSDK` class for interacting with Polymarket data
+- Initial release of POLYNOCTON SDK
+- `POLYNOCTONSDK` class for interacting with Polymarket data
 - `getMarkets()` method to fetch all active markets
 - `getMarket(marketId)` method to fetch individual market details
 - `onOrderbook()` method for real-time orderbook streaming via WebSocket
 - Full TypeScript support with comprehensive type definitions
 - Built-in retry logic for HTTP requests with exponential backoff
-- Custom error classes (`POLYEMPERIONError`, `HttpError`)
+- Custom error classes (`POLYNOCTONError`, `HttpError`)
 - Debug logging support
 - Complete API documentation and examples
 - Example scripts for listing markets and streaming orderbook data
