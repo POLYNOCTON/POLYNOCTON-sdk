@@ -787,7 +787,7 @@ Our goal is to make it easy for anyone — from developers to traders — to bui
 ### $POLYNOCTON Token
 
 Native token launched on PumpFun (Solana)  
-**Contract Address:** `8LGZxNrRfQGUhmNt2fC1DoSNqzimD41hjJUjyDG9pump`
+**Contract Address:** `Launching Soon`
 
 ---
 
@@ -805,4 +805,4 @@ Special thanks to [Polymarket](https://polymarket.com) for providing the infrast
 
 ---
 
-**© 2025 POLYNOCTON** — Building the prediction-market toolkit of the future.
+**© 2026 POLYNOCTON** — Building the prediction-market toolkit of the future.
