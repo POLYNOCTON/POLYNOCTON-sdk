@@ -1,5 +1,5 @@
 {
-  "name": "@PolyEmperion/sdk",
+  "name": "@POLYNOCTON/sdk",
   "version": "0.4.2",
   "description": "Complete TypeScript SDK for Polymarket — fetch market data, stream live orderbooks, and execute trades with CLOB integration for trading bots, dashboards, and AI agents.",
   "keywords": [
@@ -20,11 +20,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PolyEmperion/PolyEmperion-sdk.git"
+    "url": "https://github.com/POLYNOCTON/POLYNOCTON-sdk.git"
   },
-  "homepage": "https://polyemperion.xyz",
+  "homepage": "https://polynocton.xyz",
   "bugs": {
-    "url": "https://github.com/PolyEmperion/PolyEmperion-sdk/issues"
+    "url": "https://github.com/POLYNOCTON/POLYNOCTON-sdk/issues"
   },
   "type": "module",
   "main": "dist/src/index.js",
