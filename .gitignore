@@ -1,7 +1,7 @@
 # Dependencies
 node_modules/
 package-lock.json
-PolyEmperion.lock
+PolyNocton.lock
 pnpm-lock.yaml
 
 # Build outputs
@@ -17,8 +17,8 @@ dist/
 logs/
 *.log
 npm-debug.log*
-PolyEmperion-debug.log*
-PolyEmperion-error.log*
+PolyNocton-debug.log*
+PolyNocton-error.log*
 pnpm-debug.log*
 
 # OS files
