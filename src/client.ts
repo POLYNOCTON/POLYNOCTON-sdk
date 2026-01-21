@@ -5,7 +5,7 @@ import { pmFetchMarkets, pmFetchMarket } from "./providers/polymarket.js";
 import { pmSubscribeOrderbook } from "./streams/orderbook.js";
 import { TradingClient, createTradingClient } from "./trading/index.js";
 import { RelayerClient, createRelayerClient } from "./relayer/index.js";
-import type { POLYNOCTONConfig, Market, OrderbookUpdate } from "./types.js";
+import type { POLYCAVORAConfig, Market, OrderbookUpdate } from "./types.js";
 
 /**
  * Main SDK class for interacting with Polymarket.
@@ -25,11 +25,11 @@ import type { POLYNOCTONConfig, Market, OrderbookUpdate } from "./types.js";
  * @example
  * ```typescript
  * // Data-only usage (no trading)
- * const sdk = new POLYNOCTONSDK({ debug: true });
+ * const sdk = new POLYCAVORASDK({ debug: true });
  * const markets = await sdk.getMarkets();
  * 
  * // With trading enabled
- * const sdk = new POLYNOCTONSDK({
+ * const sdk = new POLYCAVORASDK({
  *   trading: {
  *     chainId: 137,
  *     backend: { privateKey: "0x..." }
@@ -39,7 +39,7 @@ import type { POLYNOCTONConfig, Market, OrderbookUpdate } from "./types.js";
  * await trading.placeOrder({...});
  * 
  * // With relayer enabled (gasless trades)
- * const sdk = new POLYNOCTONSDK({
+ * const sdk = new POLYCAVORASDK({
  *   relayer: {
  *     chainId: 137,
  *     backend: { privateKey: "0x..." }
@@ -49,12 +49,12 @@ import type { POLYNOCTONConfig, Market, OrderbookUpdate } from "./types.js";
  * await relayer.executeProxyTransactions([...]);
  * ```
  */
-export class POLYNOCTONSDK {
+export class POLYCAVORASDK {
   readonly metaBaseUrl: string;
   readonly wsBaseUrl: string;
   private log: ReturnType<typeof createLogger>;
-  private tradingConfig?: POLYNOCTONConfig["trading"];
-  private relayerConfig?: POLYNOCTONConfig["relayer"];
+  private tradingConfig?: POLYCAVORAConfig["trading"];
+  private relayerConfig?: POLYCAVORAConfig["relayer"];
 
   /**
    * Trading namespace - access trading functionality here.
@@ -103,11 +103,11 @@ export class POLYNOCTONSDK {
   };
 
   /**
-   * Create a new instance of the POLYNOCTON SDK.
+   * Create a new instance of the POLYCAVORA SDK.
    * 
    * @param cfg - Configuration options for the SDK
    */
-  constructor(cfg: POLYNOCTONConfig = {}) {
+  constructor(cfg: POLYCAVORAConfig = {}) {
     this.metaBaseUrl = cfg.metaBaseUrl ?? DEFAULTS.metaBaseUrl;
     this.wsBaseUrl = cfg.wsBaseUrl ?? DEFAULTS.wsBaseUrl;
     this.log = createLogger(!!cfg.debug);
@@ -126,8 +126,8 @@ export class POLYNOCTONSDK {
       init: () => {
         if (!this.tradingConfig) {
           throw new Error(
-            "Trading is not configured. Please pass 'trading' config to POLYNOCTONSDK constructor. " +
-            "Example: new POLYNOCTONSDK({ trading: { chainId: 137, backend: { privateKey: '0x...' } } })"
+            "Trading is not configured. Please pass 'trading' config to POLYCAVORASDK constructor. " +
+            "Example: new POLYCAVORASDK({ trading: { chainId: 137, backend: { privateKey: '0x...' } } })"
           );
         }
         return createTradingClient(this.tradingConfig);
@@ -139,8 +139,8 @@ export class POLYNOCTONSDK {
       init: () => {
         if (!this.relayerConfig) {
           throw new Error(
-            "Relayer is not configured. Please pass 'relayer' config to POLYNOCTONSDK constructor. " +
-            "Example: new POLYNOCTONSDK({ relayer: { chainId: 137, backend: { privateKey: '0x...' } } })\n" +
+            "Relayer is not configured. Please pass 'relayer' config to POLYCAVORASDK constructor. " +
+            "Example: new POLYCAVORASDK({ relayer: { chainId: 137, backend: { privateKey: '0x...' } } })\n" +
             "Note: Relayer is for ADVANCED gasless transactions. Most users should use 'trading' instead."
           );
         }
